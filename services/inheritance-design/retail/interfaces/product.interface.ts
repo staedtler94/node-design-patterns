@@ -1,4 +1,4 @@
-export interface Products{
+export interface IProduct{
     readonly skuNumber: string;
     readonly name: string;
     
@@ -10,5 +10,5 @@ export interface Products{
     readonly salesPrice: number;
     readonly discountRate: number;
 
-    getDetails: () => Products
+    getDetails: () => IProduct
 }

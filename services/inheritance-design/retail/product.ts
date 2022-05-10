@@ -1,6 +1,6 @@
-import { Products } from "./interfaces/products.interface";
+import { IProduct } from "./interfaces/product.interface";
 
-export class Electronics implements Products {
+export class Product implements IProduct {
     readonly skuNumber: string;
     readonly name: string;
     readonly vendor: string;
@@ -28,7 +28,7 @@ export class Electronics implements Products {
         this.salesPrice = salesPrice;
     }
 
-    getDetails(): Products {
+    getDetails(): IProduct {
         return this;
     }
 }

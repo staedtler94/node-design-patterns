@@ -1,9 +1,9 @@
 import { logger } from "../../utils";
-import { Electronics } from "./electronics.product";
+import { Product } from "./product";
 import { Category } from "./enum";
 
 export function startListing() {
-    const appleLaptop = new Electronics(
+    const appleLaptop = new Product(
         'el-1',
         'Apple MacBook Pro',
         '',
@@ -14,4 +14,5 @@ export function startListing() {
     );
     
     logger.info(appleLaptop.getDetails());
+    
 }
