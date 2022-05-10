@@ -1,3 +1,4 @@
 import {logger} from './services/utils';
 
-logger.silly('I am a silly log.');
+logger.silly('Starting the node project to explore design patterns.');
+
