@@ -1,14 +1,10 @@
 import { Person } from "../Person";
-import { IRole } from "./IRole.interface";
+import { HOSPITALITY_ROLES } from "../enum";
 
-export class Waiter extends Person implements IRole {
+export class Waiter extends Person{
     constructor(details: Partial<Waiter>) {
-        super(details);
+        super({ ...details, role: HOSPITALITY_ROLES.WAITER });
     }
-
-    role: string;
-    description: string;
-    responsibilities: string[];
     
     public takeOrder(dish: string) {
         console.log(`Waiter takes order for ${dish}`);

@@ -6,6 +6,7 @@ export class Person {
         this._age = details.age;
         this._badgeNumber = details.badgeNumber;
         this._gender = details.gender;
+        this._role = details.role;
     }
     
     private readonly _name: string;
@@ -27,6 +28,13 @@ export class Person {
     public get badgeNumber(): string {
         return this._badgeNumber;
     }
+
+    private readonly _role: HOSPITALITY_ROLES;
+    public get role(): HOSPITALITY_ROLES {
+        return this._role;
+    }
+
+    private readonly _skills: string[];
 
     public greet() {
         console.log(`Hello, my name is ${this.name}`);

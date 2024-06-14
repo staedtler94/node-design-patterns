@@ -11,7 +11,7 @@ For example, our hospitality staff Waiter needs to improve his greeting to pleas
 - Better unit testing
 - Good Maintainability
 
-If you were to add another staff persona example, Security Guards, then we need to add a new class and inherit it from Persons class. We also will need to understand what methods are specific to Guard's only. 
+If you were to add another staff persona example, Security Guards, then we need to add a new class and inherit it from Persons class. We also will need to understand what methods are specific to Guard's only. A good example of inheritance is when we can answer like A Waiter **is a** Person type relationship. 
 
 If the requirements is to have different roles that are solidified and never change in the Person's life-time then this use-case is met and a solution has been delivered but, but, but...
 
@@ -25,3 +25,4 @@ Simple understanding can help -
 **Associations** = builds relationships quite broad and super-set of Aggregation  
 **Aggregations** = has-a relationship eg. CS Department has 10 students. If CS Department is closed the student still exist and can move to say Mathematics Department. Super-set of Composition.  
 **Compositions** = part-of relationship eg. Finance Department is a part-of a Company. Company doesn't exists finance department doesn't exist
+
