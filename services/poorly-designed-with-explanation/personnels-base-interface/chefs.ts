@@ -1,4 +1,4 @@
-import { HOSPITALITY_ROLES } from "../../fascade/kitchen-service/enum";
+import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/restraurant-setup/enum";
 import { IPerson } from "./person.interface";
 
 export class Chef implements IPerson{

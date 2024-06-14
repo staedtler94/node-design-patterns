@@ -1,21 +1,18 @@
-import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/restraurant-setup/enum";
-import { IPerson } from "./person.interface";
+import { HOSPITALITY_ROLES } from "./enum";
 
-export class Waiter implements IPerson{
-    constructor(details: Partial<Waiter>) {
+export class Person {
+    constructor(details: Partial<Person>) {
         this._name = details.name;
         this._age = details.age;
         this._badgeNumber = details.badgeNumber;
         this._gender = details.gender;
-
-        this._role = HOSPITALITY_ROLES.WAITER;
     }
-
+    
     private readonly _name: string;
     public get name(): string {
         return this._name;
     }
-
+    
     private readonly _age: number;
     public get age(): number {
         return this._age;
@@ -31,10 +28,8 @@ export class Waiter implements IPerson{
         return this._badgeNumber;
     }
 
-    private readonly _role: HOSPITALITY_ROLES.WAITER;
-    public get role(): HOSPITALITY_ROLES {
-        return this._role;
+    public greet() {
+        console.log(`Hello, my name is ${this.name}`);
     }
 
-    takeOrder(){}
 }

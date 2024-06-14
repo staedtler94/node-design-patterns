@@ -1,7 +1,5 @@
-import { HOSPITALITY_ROLES } from "./kitchen-service/enum";
-import { theConstantOMS } from "./kitchen-service/order-management-system.service";
-import { Chef } from "./kitchen-service/personnels-base-class/chefs";
-import { Waiter } from "./kitchen-service/personnels-base-class/waiter";
+import { HOSPITALITY_ROLES } from "../builder-patterns/factory/restraurant-setup/enum";
+import { theConstantOMS } from "../builder-patterns/singleton/order-management-system.service";
 
 export class FacadeService {
     constructor() { }

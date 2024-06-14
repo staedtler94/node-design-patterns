@@ -1,6 +1,6 @@
-import { HOSPITALITY_ROLES } from "./enum";
-import { Order } from "./order.model";
-import { Chef } from "./personnels-base-class/chefs";
+import { HOSPITALITY_ROLES } from "../factory/restraurant-setup/enum";
+import { Order } from "../../fascade/kitchen-service/order.model";
+import { Chef } from "../../../poorly-designed-with-explanation/personnels-base-class/chefs";
 
 export class OrderManagementSystemService { 
     constructor(){}
@@ -43,11 +43,8 @@ export class OrderManagementSystemService {
         }, this.maxShopTime);
     }
 
-    private shopShut = false;
     private loopTime = 1000;
     private maxShopTime = 5000;
-
-    
 }
 
 
