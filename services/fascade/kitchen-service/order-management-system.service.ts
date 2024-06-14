@@ -1,6 +1,6 @@
 import { HOSPITALITY_ROLES } from "./enum";
 import { Order } from "./order.model";
-import { Chef } from "./personnels-base-interface/chefs";
+import { Chef } from "./personnels-base-class/chefs";
 
 export class OrderManagementSystemService { 
     constructor(){}
@@ -29,7 +29,7 @@ export class OrderManagementSystemService {
     public executionCycle(){
         const menuCycleId = setInterval(() => {
             console.log('Order Execution Cycle');
-            
+
             this.ordersList.forEach((order, index) => {
                 order.chef = new Chef({name: 'Chef', role: HOSPITALITY_ROLES.CHEF, cooking_cuisine: ['Italian']});
                 order.chef.prepare(order.name);
