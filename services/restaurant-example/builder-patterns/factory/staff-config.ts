@@ -1,10 +1,14 @@
-{
+export const staffConfig ={
     "staffs": [
         {
             "id": 1,
-            "name": "John Doe",
-            "position": "Manager",
-            "salary": 3000
+            "name": 'John', 
+            "age": 25, 
+            "badgeNumber": 'W1234',
+            gender: 'FEMALE',
+            "role": 'WAITER',
+            "salary": 3000,
+            "skills": ['WaiterCommunication']
         },
         {
             "id": 2,

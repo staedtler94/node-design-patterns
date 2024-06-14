@@ -1,4 +1,6 @@
-import { HOSPITALITY_ROLES } from "../builder-patterns/factory/restraurant-setup/enum";
+import { HOSPITALITY_ROLES } from "../builder-patterns/factory/enum";
+import { Chef } from "../builder-patterns/factory/roles/chef.role";
+import { Waiter } from "../builder-patterns/factory/roles/waiter.role";
 import { theConstantOMS } from "../builder-patterns/singleton/order-management-system.service";
 
 export class FacadeService {
@@ -7,7 +9,6 @@ export class FacadeService {
     public facadeRunning() {
         const John = new Chef({
             name: 'John',
-            cooking_cuisine: ['Italian', 'French', 'Japanese'],
             role: HOSPITALITY_ROLES.CHEF,
             age: 25,
             badgeNumber: 'C1234',
@@ -19,7 +20,7 @@ export class FacadeService {
             age: 25,
             badgeNumber: 'W1234',
         });
-        
+
         theConstantOMS.executionCycle();
         walter.greet();
         walter.takeOrder('Pasta');

@@ -1,7 +1,7 @@
-import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/restraurant-setup/enum";
-import { Order } from "../../fascade/kitchen-service/order.model";
 import { Person } from "./person";
 import { theConstantOMS } from "../../restaurant-example/builder-patterns/singleton/order-management-system.service";
+import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/enum";
+import { Order } from "../../restaurant-example/fascade/kitchen-service/order.model";
 
 export class Waiter extends Person {
     constructor(details: Partial<Waiter>) {

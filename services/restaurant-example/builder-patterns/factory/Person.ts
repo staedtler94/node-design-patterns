@@ -1,4 +1,5 @@
 import { HOSPITALITY_ROLES } from "./enum";
+import { Skill } from "./skills/skill.interface";
 
 export class Person {
     constructor(details: Partial<Person>) {
@@ -7,6 +8,7 @@ export class Person {
         this._badgeNumber = details.badgeNumber;
         this._gender = details.gender;
         this._role = details.role;
+        this._skills = details.skills;
     }
     
     private readonly _name: string;
@@ -34,7 +36,10 @@ export class Person {
         return this._role;
     }
 
-    private readonly _skills: string[];
+    private readonly _skills: Skill[];
+    public get skills(): Skill[] {
+        return this._skills;
+    }
 
     public greet() {
         console.log(`Hello, my name is ${this.name}`);
