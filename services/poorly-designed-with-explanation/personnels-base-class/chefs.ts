@@ -1,4 +1,4 @@
-import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/restraurant-setup/enum";
+import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/enum";
 import { Person } from "./person";
 
 export class Chef extends Person{

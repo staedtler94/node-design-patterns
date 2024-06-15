@@ -1,4 +1,4 @@
-import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/restraurant-setup/enum";
+import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/enum";
 import { IPerson } from "./person.interface";
 
 export class Waiter implements IPerson{

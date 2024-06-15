@@ -1,7 +1,7 @@
 import { Person } from "./person";
 import { theConstantOMS } from "../../restaurant-example/builder-patterns/singleton/order-management-system.service";
 import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/enum";
-import { Order } from "../../restaurant-example/fascade/kitchen-service/order.model";
+import { Order } from "../../restaurant-example/builder-patterns/factory/dto/order.model";
 
 export class Waiter extends Person {
     constructor(details: Partial<Waiter>) {
@@ -15,7 +15,7 @@ export class Waiter extends Person {
     }
     takeOrder(dish: string) {
         console.log(`Waiter ${this.name} has taken an order for ${dish}`);
-        theConstantOMS.addOrder({ name: dish, waiter: this });
+        // theConstantOMS.addOrder({ name: dish, waiter: this });
     }
 
     public greet(): void {

@@ -1,7 +1,8 @@
 import { HOSPITALITY_ROLES } from "../enum";
+import { SKILLS } from "./skills.enum";
 
 export interface Skill {
-    skill: string;
+    skill: SKILLS;
     description: string;
     experience: string;
     skillAlignment: HOSPITALITY_ROLES;

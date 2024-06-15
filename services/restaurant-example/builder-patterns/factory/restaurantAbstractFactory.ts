@@ -4,12 +4,13 @@ import { HOSPITALITY_ROLES } from "./enum";
 import { Chef } from "./roles/chef.role";
 import { Waiter } from "./roles/waiter.role";
 import { Skill } from "./skills/skill.interface";
+import { SkillsFactory } from "./skills/skills-factory";
 import { WaiterCommunication } from "./skills/waiter-communication.skill";
 import { staffConfig } from "./staff-config";
 
 export class RestaurantAbstractFactoryService {
     constructor() { }
-    
+
     private buildWaiterPerson(details?: Partial<PersonDTO>) {
         
         const skillsEnlisted = this.getAllEnlistedSkills(details.skills);
@@ -24,21 +25,12 @@ export class RestaurantAbstractFactoryService {
         });
     }
 
-
-    private getSkills(skillListed: string): Skill {
-
-        if (skillListed === 'WaiterCommunication')
-            return new WaiterCommunication();
-        else
-            return null;
-    }
-
     private getAllEnlistedSkills(gotSkills?: string[]): Skill[] {
         const skillsEnlisted: Skill[] = [];
 
         if (gotSkills) {
             gotSkills.forEach(skill => {
-                const skillInstance = this.getSkills(skill);
+                const skillInstance = SkillsFactory.impartSkills(skill);
                 if (skillInstance) {
                     skillsEnlisted.push(skillInstance);
                 }
@@ -73,7 +65,7 @@ export class RestaurantAbstractFactoryService {
                 restaurantStaffs.waiters.push(this.buildWaiterPerson(staff));
             }
             else if (staff.role === 'CHEF') {
-                restaurantStaffs.chefs.push(this.buildChefPerson());
+                restaurantStaffs.chefs.push(this.buildChefPerson(staff));
             }
         });
 

@@ -1,4 +1,4 @@
-import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/restraurant-setup/enum";
+import { HOSPITALITY_ROLES } from "../../restaurant-example/builder-patterns/factory/enum";
 
 // an interface for all staff members in the Hospitality industry
 export interface IPerson {
