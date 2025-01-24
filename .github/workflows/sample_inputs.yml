@@ -14,9 +14,9 @@ on:
 
 jobs:
   connect_to_benefits_service:
-  runs-on: ubuntu-latest
-  environment: ${{ inputs.environment }}
-  steps:
-    - name: Display Output
-      run: echo "| Environment         | ${{ inputs.environment }}|"
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Display Output
+        run: echo "| Environment         | ${{ inputs.environment }}|"
     
