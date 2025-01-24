@@ -13,10 +13,12 @@ on:
         type: string
 
 jobs:
-  connect_to_benefits_service:
+  sample_input_runner:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
       - name: Display Output
-        run: echo "| Environment         | ${{ inputs.environment }}|"
+        run: |
+          echo "| Environment         | ${{ inputs.environment }}|"
+          echo "| Input Object        | ${{inputs.customObject }}|"
     
