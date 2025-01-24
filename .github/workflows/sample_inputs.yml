@@ -1,0 +1,22 @@
+name: Sample Inputs 
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment
+        required: true
+        type: environment
+      customObject:
+        description: Input Body
+        required: true
+        type: string
+
+jobs:
+  connect_to_benefits_service:
+  runs-on: ubuntu-latest
+  environment: ${{ inputs.environment }}
+  steps:
+    - name: Display Output
+      run: echo "| Environment         | ${{ inputs.environment }}|"
+    
