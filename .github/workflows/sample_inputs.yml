@@ -11,6 +11,15 @@ on:
         description: Input Body
         required: true
         type: string
+      entityPicker:
+        description: Select an entity
+        required: true
+        type: choice
+        options:
+          - EntityA
+          - EntityB
+          - EntityC
+      
 
 jobs:
   sample_input_runner:
@@ -21,4 +30,5 @@ jobs:
         run: |
           echo "| Environment         | ${{ inputs.environment }}|"
           echo "| Input Object        | ${{inputs.customObject }}|"
-    
+          echo "| Selected Entity     | ${{ inputs.entityPicker }}|"
+
