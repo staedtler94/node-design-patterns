@@ -16,9 +16,9 @@ on:
         required: true
         type: choice
         options:
-          - EntityA
-          - EntityB
-          - EntityC
+          - "EntityA"
+          - "EntityB"
+          - "EntityC"
       
 
 jobs:
