@@ -31,4 +31,11 @@ jobs:
           echo "| Environment         | ${{ inputs.environment }}|"
           echo "| Input Object        | ${{inputs.customObject }}|"
           echo "| Selected Entity     | ${{ inputs.entityPicker }}|"
+      - name: Display Output as json
+        run:  |
+          LAMBDA_REQUEST=$( jq -n \
+                  --arg entity "$entityPicker" \
+                  '{payload: $entity }' )
+          echo -e $LAMBDA_REQUEST > lambda_payload.json 
+          cat lambda_payload.json
 
