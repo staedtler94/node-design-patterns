@@ -33,7 +33,7 @@ jobs:
           echo "| Selected Entity     | ${{ inputs.entityPicker }}|"
       - name: Display Output as json
         run:  |
-          entityPicker = ${{ inputs.entityPicker }}
+          entityPicker=${{ inputs.entityPicker }}
 
           echo $entityPicker
           
